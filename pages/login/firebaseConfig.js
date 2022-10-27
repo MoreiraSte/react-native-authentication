@@ -16,7 +16,7 @@ import {
   where,
   addDoc,
 } from "firebase/firestore";
-
+import {getStorage} from 'firebase/storage'
 const firebaseConfig = {
     apiKey: "AIzaSyBG4HeMby_9-KW_S8fsWEqgtYok171_dvI",
     authDomain: "app-native-3f609.firebaseapp.com",
@@ -27,6 +27,7 @@ const firebaseConfig = {
   };
 
   const app = initializeApp(firebaseConfig);
+  const storage = getStorage(app)
   const auth = getAuth(app);
   const db = getFirestore(app);
   const googleProvider = new GoogleAuthProvider();
@@ -92,4 +93,5 @@ export {
   registerWithEmailAndPassword,
   sendPasswordReset,
   logout,
+  storage,
 };
