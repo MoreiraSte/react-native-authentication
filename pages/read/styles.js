@@ -30,6 +30,21 @@ const styles = StyleSheet.create({
         fontSize: 30,
         color: '#DDD',
     },
+    pageLista:{
+        width:'90%',
+        flexDirection:'row',
+        marginTop:10,
+    },
+    txtLista:{
+        width:150,
+        height:30,
+        alignContent:'flex-start',
+        backgroundColor:'#eee',
+        borderRadius:5,
+        color:'#444',
+        fontSize:12,
+        padding:5
+    }
 })
 
 export default styles

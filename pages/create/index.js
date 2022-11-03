@@ -22,7 +22,7 @@ export default function Create({ navigation }) {
   const [preview, setPreview] = useState('')
 
   // ########################### IMAGEM ########################################
-  let mFoto = ""
+  // let mFoto = ""
 
   useEffect(() => {
     if (!image) {

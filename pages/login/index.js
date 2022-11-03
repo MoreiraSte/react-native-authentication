@@ -43,6 +43,7 @@ export default function Login({navigation}){
                     placeholder='password'
                     style={styles.txtInput}
                     keyboardType='password'
+                    secureTextEntry={true}
                     value={password}
                     onChangeText={(a) => {setPassword(a)}}
 

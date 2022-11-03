@@ -30,6 +30,29 @@ const styles = StyleSheet.create({
         fontSize: 30,
         color: '#DDD',
     },
+    pageDelete:{
+        width:'100px',
+        flexDirection:'row',
+        justifyContent:'space-between',
+        marginTop:15,
+    },
+    deleteItem:{
+        justifyContent:'center',
+        paddingLeft:15,
+    },
+    txtDelete:{
+        width:800,
+        height:20,
+        alignContent:'flex-start',
+        backgroundColor:'#eee',
+        padding:2,
+       
+        borderRadius:5,
+        color:'#444',
+        
+        fontSize:16,
+    }
+    
 })
 
 export default styles
