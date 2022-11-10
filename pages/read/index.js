@@ -20,34 +20,35 @@ export default function Read({navigation}) {
         setPage(list)
     },[])
 
+    const repositorio = 'https://firebasestorage.googleapis.com/v0/b/app-native-3f609.appspot.com/o/images%2F'
+    const media = '?alt=media'
+
     return (
        <View style={styles.container}><Text style={styles.texto1}>Read</Text>
             <FlatList
+                numColumns={2}
                 data={page}
                 renderItem = {({item})=>{
                     return(
-                        <View style={styles.pageLista}>
-
-                            <View>
-
-                                    <Text style={{paddingLeft:20}}>
-                                        <FontAwesome
-                                            name='user'
-                                            size={25}
-                                            color='#000'
-                                        />
-                                    </Text>
-                            </View>
-                            <View style={{paddingLeft:10}}>
-                                <Text style={styles.txtLista}
-                                onPress={()=>{navigation.navigate('Update'),{id:item.id,name:item.name}}}
-                                >
-                                    {item.name} - {item.email}
-
-                                </Text>
+                        <View style={styles.pageLista} >
+                            <View style={styles.foto20} >
+                            <TouchableOpacity
+                               
+                                onPress={()=>{navigation.navigate('Update'),{id:item.id,name:item.name,email:item.email,image:item.image}}}
+                                >                                
+                                <img src={repositorio + item.image + media} style={styles.foto30}/>
                                 
+                                
+                                <Text 
+                                >
+                                    {item.name}
+                                </Text>                
+                                <Text 
+                                >
+                                    {item.email}
+                                </Text>
+                            </TouchableOpacity>
                             </View>
-
                         </View>
                     )
                 }}
