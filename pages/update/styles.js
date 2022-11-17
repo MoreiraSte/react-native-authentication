@@ -30,6 +30,22 @@ const styles = StyleSheet.create({
         fontSize: 30,
         color: '#DDD',
     },
+    foto0:{
+        padding:10,
+        alignItems:'center',
+        backgroundColor:'#eee',
+        borderRadius:10
+        
+
+    },
+    foto1:{
+        width:150,
+        height:150,
+        backgroundColor: '#5f5',
+        alignItems:'center',
+        justifyContent:'center',
+        borderRadius:10,
+    }
 })
 
 export default styles
