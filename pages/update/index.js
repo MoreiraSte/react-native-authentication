@@ -30,7 +30,8 @@ export default function Update({ route, navigation }) {
         }
     },[])
 
-
+    // aqui esta criando uma constante assincrona, onde usa o updateDoc para atualizar os dados do banco, onde o acesso guarda o nome e email para ser atualizado
+    // quando o botão é pressionado
     const salvar = async()=>{
         await updateDoc(acesso, {
             'name':textoNome,
@@ -50,6 +51,8 @@ export default function Update({ route, navigation }) {
             </View>
             <Text>
                 Nome:
+                // o onChangeText serve nesse caso para transformar o nome que está ai com o nome em uma caixa de texto para que o usuario possa
+                // alterar e atualizar o nome
                 <TextInput
                 onChangeText={(e)=>{setTextoNome(e)}}
                 value={textoNome}
