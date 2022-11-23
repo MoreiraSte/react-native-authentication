@@ -23,22 +23,24 @@ export default function Create({ navigation }) {
 
   // ########################### IMAGEM ########################################
   // let mFoto = ""
-
+  // vai fazer a ação toda vez que a pagina recarregar, se não houver a imagem ou for diferente de uma imagem, retorna undefined
   useEffect(() => {
     if (!image) {
       setPreview(undefined)
       return
     }
-
+    // cria uma constante que tem a url do objeto criado, que é a imagem e guarda a preview dessa imagem
     const objectUrl = URL.createObjectURL(image)
     setPreview(objectUrl)
 
+     // e por fim retorna revokeurl, que é o objeto criado em createobjecturl para ser usado por mais tempo no browser
     return () => URL.revokeObjectURL(objectUrl)
   }, [image])
   // ########################### FIM IMAGEM ####################################
 
 
   const upload = e => {
+    // previne erros no evento
     e.preventDefault()
     const file = image
 
