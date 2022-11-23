@@ -14,13 +14,15 @@ export default function Login({navigation}){
 
     const navigate = useNavigation()
 
+    // quando a pagina recarregar, se estiver em loading vai retornar o que tem de acordo com a configuarção do firebase no arquivo js, se 
+    // reconhecer o usuario, irá navegar até a pagina create.
     useEffect(() => {
         if(loading){
             return;
         }
         if(user) navigate.navigate('Create')
     },[user,loading])
-
+     // criando uma constante para guardar a função que possui o registro que é o email e password
     const loginFire = () => {
         logInWithEmailAndPassword(email,password);
     }
