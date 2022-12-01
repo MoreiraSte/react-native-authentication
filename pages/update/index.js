@@ -49,10 +49,11 @@ export default function Update({ route, navigation }) {
             <View style={styles.foto0}>
                 <img src={repositorio+foto+media} style={styles.foto1}/>
             </View>
+            {/* o onChangeText serve nesse caso para transformar o nome que está ai com o nome em uma caixa de texto para que o usuario possa
+            alterar e atualizar o nome */}
             <Text>
                 Nome:
-                // o onChangeText serve nesse caso para transformar o nome que está ai com o nome em uma caixa de texto para que o usuario possa
-                // alterar e atualizar o nome
+                
                 <TextInput
                 onChangeText={(e)=>{setTextoNome(e)}}
                 value={textoNome}

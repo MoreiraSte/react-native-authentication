@@ -31,24 +31,25 @@ const styles = StyleSheet.create({
         color: '#DDD',
     },
     pageDelete:{
-        width:'100px',
+        width:300,
         flexDirection:'row',
-        justifyContent:'space-between',
+        //justifyContent:'space-between',
         marginTop:15,
+        backgroundColor:'#0f0'
     },
     deleteItem:{
         justifyContent:'center',
         paddingLeft:15,
     },
     txtDelete:{
-        width:800,
+        //width:800,
         height:20,
         alignContent:'flex-start',
-        backgroundColor:'#eee',
+        //backgroundColor:'#eee',
         padding:2,
        
         borderRadius:5,
-        color:'#444',
+        color:'#000',
         
         fontSize:16,
     }
